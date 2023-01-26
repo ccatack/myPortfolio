@@ -12,7 +12,7 @@ export default function Example() {
 
     return (
         <div>
-            <button onClick={handleClick}>count: {count}</button>
+            <button className="btn btn-success" onClick={handleClick}>count: {count}</button>
         </div>
     )
 }
