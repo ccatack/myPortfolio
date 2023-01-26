@@ -1,5 +1,11 @@
 import * as React from "react"
+import Example from "./Example"
 
 export default function Home() {
-  return <div>Hello world!</div>
+  return (
+     <div>
+        ayo
+        <Example/>
+      </div>
+  )
 }
