@@ -1,18 +1,13 @@
 import React from "react";
+import Header from "../components/Header";
+import Body from "../components/Body";
 
 export default function Example() {
 
-    const [count, setCount] = React.useState(0);
-
-    function handleClick(e) {
-        setCount((prevCount) => {
-            return prevCount + 1
-        });
-    }
-
     return (
-        <div>
-            <button className="btn btn-success" onClick={handleClick}>count: {count}</button>
+        <div className="flex flex-col items-center">
+            <Header/>
+            <Body/>
         </div>
     )
 }
