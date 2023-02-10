@@ -1,13 +1,14 @@
 // absolute path 
 import * as React from "react"
 // relative path 
-import Example from "./Example"
 import "../../dist/output.css";
+import PageLayout from "../components/layouts/PageLayout";
+import HomeBody from "../components/HomeBody";
 
 export default function Home() {
   return (
-     <div>
-        <Example/>
-      </div>
+     <PageLayout>
+        <HomeBody/>
+     </PageLayout>
   )
 }
