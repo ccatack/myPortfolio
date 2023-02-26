@@ -5,9 +5,9 @@ import Footer from "./Footer";
 export default function PageLayout(props) {
 
     return (
-        <div className="bg-gray-200">
+        <div className={props.className}>
             <Header/>
-            <body className="flex flex-col items-center">{props.children}</body>
+            {props.children}
             <Footer/>
         </div>
     )
