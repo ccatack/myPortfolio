@@ -6,7 +6,9 @@ import PageLayout from "../components/layouts/PageLayout";
 import HomeBody from "../components/HomeBody";
 
 //CAN ANYBODY DEPLOY TO GHPAGES CUZ THEY HAVE THE DEPLOY SCRIPT?
-//HOW DO I MAKE IT SO THAT HOME PAGE IS EXACT SIZE OF SCREEN?
+
+//HOW TO MAKE MARGINS RESIZE WITH VW?
+   //HOW TO CENTER BIG TEXT WITHIN IMAGE?
 
 export default function Home() {
   return (

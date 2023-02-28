@@ -15,7 +15,7 @@ export default function Footer() {
                 <img src={GHLogo} className="ml-6 h-8 max-h-full opacity-40 hover:opacity-80 cursor-pointer"></img>
             </a>
             <a href="mailto:ccatack@gmail.com" target="_blank">
-                <img src={EmailLogo} className="ml-6 mr-6 h-8 max-h-full opacity-40 hover:opacity-80 cursor-pointer"></img>
+                <img src={EmailLogo} className="ml-6 mr-8 h-8 max-h-full opacity-40 hover:opacity-80 cursor-pointer"></img>
             </a>
         </div>
     )
