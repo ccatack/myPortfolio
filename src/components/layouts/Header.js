@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 export default function Header() {
 
     return (
-        <nav className="flex flex-row items-center justify-end bg-gradient-to-r from-transparent to-white h-12 fixed w-full">
+        <nav className="flex flex-row items-center justify-end bg-gradient-to-r from-transparent to-white h-12 z-40 fixed w-full">
             <button className="ml-16">
                 <Link to="/">Home</Link>
             </button>
