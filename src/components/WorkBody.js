@@ -5,8 +5,8 @@ export default function WorkBody() {
 
     return (
         <div className="">
-            <div className=""> {/* how to make this element the height of the video? so that i can center the text */}
-                <video src={myWorkHeroAnim} autoPlay loop muted  className="absolute top-0 z-0"/>
+            <div className="relative">
+                <video src={myWorkHeroAnim} autoPlay loop muted  className="absolute top-0 bottom-0 z-0"/>
                 <div className="relative text-7xl z-10">
                     My Work
                 </div>

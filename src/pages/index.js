@@ -5,18 +5,18 @@ import 'react-tooltip/dist/react-tooltip.css'
 import "../../dist/output.css";
 import PageLayout from "../components/layouts/PageLayout";
 import HomeBody from "../components/HomeBody";
+import Hero from "../components/layouts/Hero";
 
-//CAN ANYBODY DEPLOY TO GHPAGES CUZ THEY HAVE THE DEPLOY SCRIPT?
 
-//HOW TO MAKE MARGINS RESIZE WITH VW?
-   //HOW TO CENTER BIG TEXT WITHIN IMAGE?
+//auto formatting
+//why homebody component
 
-//HOW TO MAKE VIDEO WORK AS A BACKGROUND - dont want to have to use absolute positioning?
+//use hero image and ditch body things
+//make grid of elements/pixels which can be a color
 
 export default function Home() {
   return (
-     <PageLayout className="h-screen flex flex-col">
-        <HomeBody/>
+     <PageLayout className="h-screen flex flex-col" hero={<Hero title="Corbin Atack" subtitle="Hi! I am newly graduated with a degree in computer science and art, looking for opportunities to leverage my skills in front end and full stack design and development." className="flex-grow bg-white" />} >
      </PageLayout>
   )
 }
