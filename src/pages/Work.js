@@ -1,6 +1,5 @@
 import React from "react";
 import PageLayout from "../components/layouts/PageLayout";
-import WorkBody from "../components/WorkBody";
 import Hero from "../components/layouts/Hero";
 import myWorkHeroAnim from "../animations/myWorkPageAnimationv2.mp4"
 
