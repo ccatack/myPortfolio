@@ -13,7 +13,7 @@ import Hero from "../components/layouts/Hero";
 
 export default function Home() {
   return (
-     <PageLayout className="h-screen flex flex-col" hero={<Hero title="Corbin Atack" subtitle="Hi! I am newly graduated with a degree in computer science and art, looking for opportunities to leverage my skills in front end and full stack design and development." className="flex-grow bg-white" />} >
+     <PageLayout className="h-screen flex flex-col" hero={<Hero title="Corbin Atack" subtitle="Hi! I am newly graduated with a degree in computer science and art, looking for opportunities to leverage my skills in front end and full stack design and development." className="bg-[url('/test.png')] bg-no-repeat bg-cover flex-grow bg-white" />} >
      </PageLayout>
   )
 }
