@@ -617,10 +617,6 @@ video {
   height: 100vh;
 }
 
-.h-\[30px\] {
-  height: 30px;
-}
-
 .h-12 {
   height: 3rem;
 }
@@ -661,28 +657,12 @@ video {
   width: 7rem;
 }
 
-.w-\[30px\] {
-  width: 30px;
-}
-
 .flex-grow {
   flex-grow: 1;
 }
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.grid-cols-\[31px_31px_31px_31px\] {
-  grid-template-columns: 31px 31px 31px 31px;
-}
-
-.grid-rows-\[10px\] {
-  grid-template-rows: 10px;
-}
-
-.grid-rows-\[31px\] {
-  grid-template-rows: 31px;
 }
 
 .flex-row {
@@ -735,10 +715,6 @@ video {
   border-width: 8px;
 }
 
-.border-\[1px\] {
-  border-width: 1px;
-}
-
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -762,11 +738,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#aa55ff\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(170 85 255 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\/corb123\.png\'\)\] {

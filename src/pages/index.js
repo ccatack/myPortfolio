@@ -9,7 +9,6 @@ import Hero from "../components/layouts/Hero";
 
 //auto formatting
 
-//make grid of elements/pixels which can be a color
 
 export default function Home() {
   return (
