@@ -21,8 +21,8 @@ export default function Work() {
                     <div className="text-md">{item.projectDescription}</div>
                     <div className="text-center text-xs text-[#006caf]">{item.stack}</div>
                 </div>
-                <img src={item.image} className="rounded-lg bg-white">
-                </img>
+                {item.image && <img src={item.image} className="rounded-lg bg-white"></img>}
+                {item.video && <video src={item.video} autoPlay loop muted className="rounded-lg"/>}
             </div>
         )
     }

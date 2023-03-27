@@ -4,14 +4,14 @@ export default [
         projectTitle: "WRASCAL",
         projectDescription: "Working my senior capstone project, I learned how to use my first JS framework, work with clients, implement important UI/UX design principles, and what it takes to develop a full stack app.",
         stack: "Vue.js | HTML/CSS | AWS EC2 & RDS | PostgreSQL | Node.js | Express.js | GitHub",
-        image: "/placeholder.png",
+        image: "/workEXP/WRASCAL.png",
     },
     {
         id: 3,
         projectTitle: "Graphics App Research",
         projectDescription: "Collaborated with a professor to build prototypes for an online, educational graphics tool. This project went in depth with JavaScript and introduced me to using external libraries.",
         stack: "JavaScript | HTML/CSS | p5.js | Flume.js",
-        image: "/placeholder.png",
+        video: "/workEXP/research.mp4",
     },
     {
         id: 2,
