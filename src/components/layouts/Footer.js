@@ -16,7 +16,7 @@ export default function Footer() {
     }
 
     return (
-        <div className="bg-white h-12 flex flex-row items-center justify-end">
+        <div className="hidden bg-white h-12 lg:flex flex-row items-center justify-end">
             <div className="text-xs text-gray-500">Copyright {getYear()} Corbin Atack</div>
             <a href="https://www.linkedin.com/in/corbin-atack/" target="_blank" title="LinkedIn">
                 <img src={LILogo} className="ml-6 h-8 max-h-full opacity-40 hover:opacity-80 cursor-pointer"></img>
