@@ -1,36 +1,29 @@
 import classNames from "classnames";
-import React, {useState} from "react";
+import React, {useMemo, useState} from "react";
 
 
 
 export default function PixelEditor() {
     const [gridSize, setGridSize] = useState(48)
     const [cellSize, setCellSize] = useState(10)
-    const [colorInput, setColorInput] = useState("#ffffff")
-
+    const [colorInput, setColorInput] = useState("#ff0000")
     const [mouseDown, setMouseDown] = useState(false)
 
-    var initID = 0
-    const newID = () => {
-        var temp = initID
-        initID += 1
-        return temp
+    const makeCells = () => {
+        const newCells = []
+        for (let i = 0; i < gridSize*gridSize; i++) {
+            newCells[i] = <Cell mouseDown={mouseDown} colorInput={colorInput} key={i} />
+        }
+        return newCells
     }
 
-    const [cellDatas, setCellDatas] = useState(new Array(gridSize*gridSize).fill({"bgColor": colorInput}))
+    const cells = useMemo(makeCells, [mouseDown, colorInput])
+    // const cells = cellDatas.map((_, index) =>
+    // <Cell mouseDown={mouseDown} colorInput={colorInput} key={index} />);
 
     const handleColorInputChange = (e) => {
         const newColor = e.target.value
         setColorInput(newColor)
-    }
-
-    const handleCellColorChange = (indexOfCellClicked) => {
-        setCellDatas(cellDatas.map((cd, cdIndex) => {
-            if (cdIndex === indexOfCellClicked) {
-                return {...cd, bgColor: colorInput}
-            }
-            return cd;
-        }))
     }
 
     const handleMouseDown = () => {
@@ -40,11 +33,6 @@ export default function PixelEditor() {
     const handleMouseUp = () => {
         setMouseDown(false)
     }
-
-    const cells = cellDatas.map(({ bgColor}, index) =>
-        <Cell colorChange={handleCellColorChange} mouseDown={mouseDown} index={index} color={bgColor} key={index} />);
-
-
 
     return (
         <div onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>
@@ -65,24 +53,31 @@ export default function PixelEditor() {
     )
 }
 
-function Cell({colorChange, index, color, mouseDown}) {
+function Cell({colorInput, mouseDown}) {
+    const [color, setColor] = useState("#ffff")
+
     const handleMouseEnter = () => {
         if (mouseDown) {
-            colorChange(index)
+            colorChange()
         }
     }
 
+    const handleClick = () => {
+        colorChange()
+    }
+
+    const colorChange = () => {
+        setColor(colorInput)
+    }
+
     return (
-        <div style={{ backgroundColor: color }} onMouseEnter={handleMouseEnter} ></div>
+        <div style={{ backgroundColor: color }} onMouseOver={handleMouseEnter} onClick={handleClick}></div>
     )
 }
 
 /* 
-in grid: track whether mouse is down or not in state
-in the cell: pass mouse down state and trigger onmouseenter if mouse is down then change color
-onclick -> change color which is triggered by drag or click
+get react dev tool to work
+apply track mouse location with state
 
-sometimes it doesnt correctly understand when the drag ends
-when dragging, its spotty when moving the mouse too fast
-cant just click pixels anymore because the mouse enters the cell before it mouses down
+push to master and make new branch
 */

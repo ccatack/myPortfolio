@@ -15,19 +15,22 @@ export default function Header() {
 
     return (
         <div>
-            <nav className="hidden md:flex flex-row items-center justify-end bg-gradient-to-r from-transparent to-white h-12 z-40 fixed w-full">
-                <button className="ml-16">
-                    <Link to="/">Home</Link>
-                </button>
-                <button className="ml-16">
-                    <Link to="/Work">My Work</Link>
-                </button>
-                <button className="ml-16">
-                    <Link to="/Resume">Resume</Link>
-                </button>
-                <button className="ml-16 mr-8">
-                    <Link to="/About">About</Link>
-                </button>
+            <nav className="hidden md:flex flex-row items-center bg-gradient-to-r from-transparent to-white h-16 z-40 fixed w-full">
+                <img src="/favicon.ico.png" className="h-full ml-6"></img>
+                <div className="flex flex-row items-center justify-end justify-self-end w-full">
+                    <button className="ml-16">
+                        <Link to="/">Home</Link>
+                    </button>
+                    <button className="ml-16">
+                        <Link to="/Work">My Work</Link>
+                    </button>
+                    <button className="ml-16">
+                        <Link to="/Resume">Resume</Link>
+                    </button>
+                    <button className="ml-16 mr-8">
+                        <Link to="/About">About</Link>
+                    </button>
+                </div>
             </nav>
 
             <button onClick={handleMenuOpen} className="fixed z-10 flex w-10 h-10 md:hidden">
