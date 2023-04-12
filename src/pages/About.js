@@ -6,10 +6,10 @@ import signature from "../images/signature.png"
 export default function About() {
 
     return (
-        <PageLayout hero={<Hero title="About Me" className="bg-[url('/corb123.png')] bg-no-repeat bg-cover text-white" ></Hero>}>
+        <PageLayout hero={<Hero title="About Me" className="bg-[#2a2d29] lg:bg-[url('/corb123.png')] bg-no-repeat bg-cover text-white" ></Hero>}>
             <div className="text-sm flex flex-col items-center justify-center">
-                <div className="w-1/2 mt-14">
-                    Hello, I’m Corbin! I am a newly graduated student of Whitman College 
+                <div className="w-5/6 lg:w-1/2 mt-14">
+                    Hello, I’m Corbin Atack! I am a newly graduated student of Whitman College 
                     looking to get started in the software development industry. I have
                     skills in full stack and front end development. Since graduating, I 
                     have been focused expanding my technical skill set by working on personal 
@@ -24,7 +24,7 @@ export default function About() {
                     Seattle. My other hobbies include creating digital art (see my art
                     blog) and printmaking.
                 </div>
-                <img src={signature} className="w-1/6"></img>
+                <img src={signature} className="w-1/3 lg:w-1/6 mb-12"></img>
             </div>
         </PageLayout>
     )
