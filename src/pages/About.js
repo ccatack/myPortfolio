@@ -6,8 +6,8 @@ import signature from "../images/signature.png"
 export default function About() {
 
     return (
-        <PageLayout hero={<Hero title="About Me" className="bg-[#2a2d29] lg:bg-[url('/corb123.png')] bg-no-repeat bg-cover text-white" ></Hero>}>
-            <div className="text-sm flex flex-col items-center justify-center">
+        <PageLayout hero={<Hero title="About Me" className="bg-[url('/firsbProfile.jpg')] lg:bg-[url('/corb123.png')] bg-no-repeat bg-cover text-white" ></Hero>}>
+            <div className="text-sm flex flex-col items-center justify-center ">
                 <div className="w-5/6 lg:w-1/2 mt-14">
                     Hello, I’m Corbin Atack! I am a newly graduated student of Whitman College 
                     looking to get started in the software development industry. I have

@@ -3,6 +3,8 @@ import PageLayout from "../components/layouts/PageLayout";
 import Hero from "../components/layouts/Hero";
 import myWorkHeroAnim from "../animations/myWorkPageAnimation2.mp4"
 import workData from "../data/workExp.js"
+import { Disclosure } from "@headlessui/react";
+import classNames from "classnames";
 
 export default function Work() {
 
@@ -11,9 +13,21 @@ export default function Work() {
             <div key={item.id} className="flex flex-col lg:flex-row lg:p-8 lg:h-72 lg:justify-between" >
                 <div className="lg:grid lg:w-[45%] grid-rows-[2fr_6fr_1fr]">
                     <div className="flex flex-row text-lg">
-                        <div className="lg:text-2xl">{item.projectTitle}</div>
-                        <div className="lg:hidden">{item.mobileDescription}</div>
-                        {item.link && <a href={item.link} className="mt-2 ml-2" target="_blank"><img src="/linkIcon.png" className="max-h-5"></img></a>}
+                        <div className="hidden lg:block lg:text-2xl">{item.projectTitle}</div>
+                        <div className="flex flex-col lg:hidden mb-2 w-full"> {/* disclosure container */}
+                            <Disclosure>
+                                        <Disclosure.Button className="pb-1 text-xl text-left flex flex-row justify-between items-center">
+                                            <div className="flex flex-row">
+                                                {item.projectTitle}
+                                                {item.link && <a href={item.link} className="mt-1 lg:mt-2 ml-2" target="_blank"><img src="/linkIcon.png" className="max-h-5"></img></a>}
+                                            </div>
+                                            <img src="/expandIcon.png" className="h-6 ui-open:rotate-[270deg] ui-open:transform opacity-60"></img>
+                                        </Disclosure.Button>
+                                        <Disclosure.Panel className="p-2 text-base text-gray-500 bg-[#F6EEF2] rounded-lg">
+                                            {item.projectDescription}
+                                        </Disclosure.Panel>
+                            </Disclosure>
+                        </div>
                     </div>
                     <div className="hidden lg:block text-md">{item.projectDescription}</div>
                     <div className="hidden lg:block text-center text-xs text-[#006caf]">{item.stack}</div>
