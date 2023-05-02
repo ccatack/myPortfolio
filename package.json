@@ -15,6 +15,8 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.14",
+    "@headlessui/tailwindcss": "^0.1.3",
     "classnames": "^2.3.2",
     "gatsby": "^5.5.0",
     "react": "^18.2.0",

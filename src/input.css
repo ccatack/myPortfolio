@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap"); /* google font url */
+
+body {
+  font-family: "Yeseva One", cursive;
+}
+
+.curtain {
+  @apply relative;
+}
+
+.curtain > div {
+  @apply z-1;
+}
+
+.curtain::before {
+  @apply bg-black opacity-20 absolute w-full h-full top-0 left-0 z-0
+  content: "";
+}
