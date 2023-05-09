@@ -9,4 +9,5 @@
  */
 module.exports = {
   plugins: [],
-}
+  pathPrefix: "/myPortfolio",
+};

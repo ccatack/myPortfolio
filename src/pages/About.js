@@ -2,6 +2,8 @@ import React from "react";
 import PageLayout from "../components/layouts/PageLayout";
 import Hero from "../components/layouts/Hero";
 import signature from "../images/signature.png";
+import { withPrefix } from "gatsby";
+export { Head } from "../components/layouts/PageLayout";
 
 export default function About() {
   return (
@@ -9,7 +11,7 @@ export default function About() {
       hero={
         <Hero
           title="About Me"
-          className="bg-[url('/firsbProfile.jpg')] lg:bg-[url('/corb123.png')] bg-no-repeat bg-cover text-white curtain"
+          className={`bg-[url(/firsbProfile.jpg)] lg:bg-[url(/corb123.png)] bg-no-repeat bg-cover text-white curtain`}
         ></Hero>
       }
     >

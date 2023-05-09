@@ -1,21 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap"); /* google font url */
 
 body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.titles {
   font-family: "Yeseva One", cursive;
 }
 
+.titles2 {
+  font-family: "Playfair Display", serif;
+}
+
 .curtain {
-  @apply relative;
+  @apply relative z-10;
 }
 
 .curtain > div {
-  @apply z-1;
+  @apply z-10;
 }
 
 .curtain::before {
-  @apply bg-black opacity-20 absolute w-full h-full top-0 left-0 z-0
+  @apply bg-black opacity-20 absolute w-full h-full top-0 left-0 z-0 lg:hidden;
   content: "";
 }
