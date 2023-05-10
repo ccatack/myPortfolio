@@ -830,6 +830,14 @@ video {
   grid-template-columns: 150px 150px;
 }
 
+.grid-cols-\[1fr_1fr\] {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-cols-\[1fr_1fr_1fr\] {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .grid-rows-\[2fr_6fr_1fr\] {
   grid-template-rows: 2fr 6fr 1fr;
 }
@@ -840,6 +848,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.content-center {
+  align-content: center;
 }
 
 .items-start {
@@ -862,6 +874,10 @@ video {
   justify-content: space-between;
 }
 
+.gap-\[20px\] {
+  gap: 20px;
+}
+
 .gap-y-\[20px\] {
   row-gap: 20px;
 }
@@ -880,6 +896,10 @@ video {
 
 .self-start {
   align-self: flex-start;
+}
+
+.self-center {
+  align-self: center;
 }
 
 .justify-self-end {
@@ -956,6 +976,16 @@ video {
 
 .bg-white\/90 {
   background-color: rgb(255 255 255 / 0.9);
+}
+
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\/corb123\.png\'\)\] {
@@ -1294,6 +1324,10 @@ body {
 
   .lg\:justify-evenly {
     justify-content: space-evenly;
+  }
+
+  .lg\:self-auto {
+    align-self: auto;
   }
 
   .lg\:self-end {

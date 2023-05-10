@@ -11,7 +11,7 @@ export default function Resume() {
     return (
       <div
         key={item.id}
-        className="flex flex-col h-32 w-32 items-center p-2 shadow-md rounded-md"
+        className="flex flex-col h-32 w-32 items-center p-2 shadow-md rounded-md bg-white"
       >
         <img src={withPrefix(item.image)} className="h-2/3"></img>
         <div className="mt-4">{item.title}</div>
@@ -32,7 +32,7 @@ export default function Resume() {
     >
       <div className="flex flex-col p-4">
         <div className="titles2 text-3xl lg:ml-8">My go-to tools:</div>
-        <div className="mt-4 grid grid-cols-[150px_150px] gap-y-[20px] lg:flex lg:flex-row lg:justify-evenly lg:mt-12">
+        <div className="mt-4 grid grid-cols-[1fr_1fr] gap-[20px] self-center lg:self-auto lg:flex lg:flex-row lg:justify-evenly lg:mt-12 ">
           {skillTiles}
         </div>
       </div>
