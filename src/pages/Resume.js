@@ -26,7 +26,7 @@ export default function Resume() {
         <Hero
           className=""
           title="Let's Work Together"
-          subtitle="With my ability to collaborate and love for learning, I could be a great fit for your team."
+          subtitle="With my ability to collaborate and love for learning, I&nbsp;could be a great fit for your team."
         ></Hero>
       }
     >

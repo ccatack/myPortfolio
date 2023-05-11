@@ -19,6 +19,18 @@ export default function Work() {
             <div className="hidden lg:block lg:text-2xl titles2">
               {item.projectTitle}
             </div>
+            {item.link && (
+              <a
+                href={item.link}
+                className="mt-1 lg:mt-2 ml-2 hidden lg:block"
+                target="_blank"
+              >
+                <img
+                  src={withPrefix("/linkIcon.png")}
+                  className="max-h-5"
+                ></img>
+              </a>
+            )}
             <div className="flex flex-col lg:hidden mb-2 w-full">
               {" "}
               {/* disclosure container */}
@@ -44,7 +56,7 @@ export default function Work() {
                     className="h-6 ui-open:rotate-[270deg] ui-open:transform opacity-60"
                   ></img>
                 </Disclosure.Button>
-                <Disclosure.Panel className="p-2 text-base text-gray-500 bg-[#F6EEF2] rounded-lg">
+                <Disclosure.Panel className="p-2 text-base text-gray-500 bg-[#EEF2F6] rounded-lg">
                   {item.projectDescription}
                 </Disclosure.Panel>
               </Disclosure>

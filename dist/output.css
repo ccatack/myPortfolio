@@ -651,16 +651,16 @@ video {
   margin-left: 1rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .mt-1 {
   margin-top: 0.25rem;
 }
 
 .ml-2 {
   margin-left: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .mb-8 {
@@ -960,6 +960,11 @@ video {
 
 .bg-white\/90 {
   background-color: rgb(255 255 255 / 0.9);
+}
+
+.bg-\[\#EEF2F6\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 242 246 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\/corb123\.png\'\)\] {
