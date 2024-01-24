@@ -3,7 +3,6 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
-      fontFamily: {},
       keyframes: {
         slideIn: {
           "0%": { top: "100%" },

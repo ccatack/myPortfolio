@@ -4,7 +4,8 @@ import Hero from "../components/layouts/Hero";
 import myWorkHeroAnim from "../animations/myWorkPageAnimation2.mp4";
 import workData from "../data/workExp.js";
 import { Disclosure } from "@headlessui/react";
-import classNames from "classnames";
+import { withPrefix } from "gatsby";
+export { Head } from "../components/layouts/PageLayout";
 
 export default function Work() {
   const workTiles = workData.map((item) => {
@@ -15,15 +16,27 @@ export default function Work() {
       >
         <div className="lg:grid lg:w-[45%] grid-rows-[2fr_6fr_1fr]">
           <div className="flex flex-row text-lg">
-            <div className="hidden lg:block lg:text-2xl">
+            <div className="hidden lg:block lg:text-2xl titles2">
               {item.projectTitle}
             </div>
+            {item.link && (
+              <a
+                href={item.link}
+                className="mt-1 lg:mt-2 ml-2 hidden lg:block"
+                target="_blank"
+              >
+                <img
+                  src={withPrefix("/linkIcon.png")}
+                  className="max-h-5"
+                ></img>
+              </a>
+            )}
             <div className="flex flex-col lg:hidden mb-2 w-full">
               {" "}
               {/* disclosure container */}
               <Disclosure>
                 <Disclosure.Button className="pb-1 text-xl text-left flex flex-row justify-between items-center">
-                  <div className="flex flex-row">
+                  <div className="flex flex-row titles2">
                     {item.projectTitle}
                     {item.link && (
                       <a
@@ -31,16 +44,19 @@ export default function Work() {
                         className="mt-1 lg:mt-2 ml-2"
                         target="_blank"
                       >
-                        <img src="/linkIcon.png" className="max-h-5"></img>
+                        <img
+                          src={withPrefix("/linkIcon.png")}
+                          className="max-h-5"
+                        ></img>
                       </a>
                     )}
                   </div>
                   <img
-                    src="/expandIcon.png"
+                    src={withPrefix("/expandIcon.png")}
                     className="h-6 ui-open:rotate-[270deg] ui-open:transform opacity-60"
                   ></img>
                 </Disclosure.Button>
-                <Disclosure.Panel className="p-2 text-base text-gray-500 bg-[#F6EEF2] rounded-lg">
+                <Disclosure.Panel className="p-2 text-base text-gray-500 bg-[#EEF2F6] rounded-lg">
                   {item.projectDescription}
                 </Disclosure.Panel>
               </Disclosure>
@@ -54,10 +70,19 @@ export default function Work() {
           </div>
         </div>
         {item.image && (
-          <img src={item.image} className="rounded-lg bg-white"></img>
+          <img
+            src={withPrefix(item.image)}
+            className="rounded-lg bg-white"
+          ></img>
         )}
         {item.video && (
-          <video src={item.video} autoPlay loop muted className="rounded-lg" />
+          <video
+            src={withPrefix(item.video)}
+            autoPlay
+            loop
+            muted
+            className="rounded-lg"
+          />
         )}
         <div className="lg:hidden text-center text-xs text-[#006caf] mb-8">
           {item.stack}

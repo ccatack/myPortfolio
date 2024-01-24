@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
+import { Link, withPrefix } from "gatsby";
 import { Tooltip } from "react-tooltip";
 import LILogo from "../../images/linkedinLogo.png";
 import GHLogo from "../../images/githubLogo.png";
@@ -21,10 +21,13 @@ export default function Header() {
   };
 
   return (
-    <div className="">
+    <div className="titles2">
       <nav className="hidden lg:flex flex-row items-center bg-gradient-to-r from-transparent to-white h-16 z-40 fixed w-full">
         <Link to="/" className="h-full">
-          <img src="/favicon.ico.png" className="h-full ml-6"></img>
+          <img
+            src={withPrefix("/favicon.ico.png")}
+            className="h-full ml-6"
+          ></img>
         </Link>
         <div className="flex flex-row items-center justify-end justify-self-end w-full">
           <button className="ml-16">
@@ -47,7 +50,7 @@ export default function Header() {
           onClick={handleMenuOpen}
           className="fixed z-10 flex w-12 h-12 bottom-[3%] right-1/2 translate-x-1/2 lg:hidden items-center justify-center bg-white rounded-full border-2 border-black"
         >
-          <img src="/menuIcon.png" className="h-4/5"></img>
+          <img src={withPrefix("/menuIcon.png")} className="h-4/5"></img>
         </button>
       )}
 
@@ -106,7 +109,7 @@ export default function Header() {
             onClick={handleMenuClose}
             className="flex text-lg w-full h-28 items-center justify-center"
           >
-            <img src="/closeIcon.png" className="h-1/2"></img>
+            <img src={withPrefix("/closeIcon.png")} className="h-1/2"></img>
           </button>
         </div>
       )}

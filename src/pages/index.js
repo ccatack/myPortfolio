@@ -6,10 +6,8 @@ import "../../dist/output.css";
 import PageLayout from "../components/layouts/PageLayout";
 import Hero from "../components/layouts/Hero";
 import Anim from "../animations/homepageHeroV2.mp4";
-
-//FONTS
-//DIALOGUE UI
-//Darken about page image?
+import { withPrefix } from "gatsby";
+export { Head } from "../components/layouts/PageLayout.js";
 
 export default function Home() {
   return (
@@ -34,7 +32,7 @@ export default function Home() {
         <div className="text-black text-md text-center rounded-md">
           See my work
         </div>
-        <img src="/arrow.png" className="h-full mt-6"></img>
+        <img src={withPrefix("/arrow.png")} className="h-full mt-6"></img>
       </div>
     </PageLayout>
   );
